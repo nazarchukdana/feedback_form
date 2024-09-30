@@ -13,12 +13,29 @@ const FeedbackForm = () => {
             ...formData, [name]: value
         });
     };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const confirmationMessage = `
+        Name: ${formData.name}
+        Email: ${formData.email}
+        Feedback: ${formData.feedback}`;
+        const isConfirmed = window.confirm(`Please confirm your details: \n\n${confiramtionMessage}`);
+        if (isConfirmed){
+            console.log("submitting feedback:", formData);
+            setFormData({
+                name: '',
+                email: '',
+                feedback: ''
+            });
+            alert("thank you for your valuable feedback!");
+        }
+    };
   return (
     <>
     <nav>
     Tell Us What You Think
     </nav>
-      <form className="feedback-form">
+      <form className="feedback-form" onSubmit={handleSubmit}>
         <h2>We'd Love to Hear From You!</h2>
         <p>Please share your feedback with us.</p>
         <input
