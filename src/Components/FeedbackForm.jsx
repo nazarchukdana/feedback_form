@@ -9,7 +9,7 @@ const FeedbackForm = () => {
     });
     const handleChange = (event) =>{
         const {name, value} = event.target;
-        setFormDate({
+        setFormData({
             ...formData, [name]: value
         });
     };
