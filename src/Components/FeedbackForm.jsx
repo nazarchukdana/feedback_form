@@ -56,6 +56,19 @@ const FeedbackForm = () => {
             value={formData.feedback}
             onChange={handleChange}
             ></textarea>
+        <div style={{display:'flex',gap:'10px',flexDirection:'column'}}>
+            <span>Rate Us: </span>
+            <input
+                type="radio"
+                name="rating"
+                value="1"
+                onChange={handleChange}/>
+            <input
+                type="radio"
+                name="rating"
+                value="2"
+                onChange={handleChange}/>
+        </div>
         <button type="submit">Submit Feedback</button>
         
       </form>
