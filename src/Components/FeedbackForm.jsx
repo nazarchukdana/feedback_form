@@ -24,14 +24,20 @@ const FeedbackForm = () => {
         <input
             type="text"
             placeholder="Your Name"
-            name="name" />
+            name="name"
+            value={formData.name}
+            onChange={handleChange} />
         <input
             type="email"
             placeholder="Your Email"
-            name="email" />
+            name="email"
+            value={formData.email}
+            onChange={handleChange} />
         <textarea
             name="feedback"
             placeholder="Your Feedback"
+            value={formData.feedback}
+            onChange={handleChange}
             ></textarea>
         <button type="submit">Submit Feedback</button>
         
