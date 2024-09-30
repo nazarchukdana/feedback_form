@@ -58,16 +58,16 @@ const FeedbackForm = () => {
             ></textarea>
         <div style={{display:'flex',gap:'10px',flexDirection:'column'}}>
             <span>Rate Us: </span>
-            <input
+            <p><input
                 type="radio"
                 name="rating"
                 value="1"
-                onChange={handleChange}/>
-            <input
+                onChange={handleChange}/>1</p>
+            <p><input
                 type="radio"
                 name="rating"
                 value="2"
-                onChange={handleChange}/>
+                onChange={handleChange}/> 2</p>
         </div>
         <button type="submit">Submit Feedback</button>
         
