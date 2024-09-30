@@ -19,15 +19,15 @@ const FeedbackForm = () => {
         Name: ${formData.name}
         Email: ${formData.email}
         Feedback: ${formData.feedback}`;
-        const isConfirmed = window.confirm(`Please confirm your details: \n\n${confiramtionMessage}`);
+        const isConfirmed = window.confirm(`Please confirm your details:\n\n${confirmationMessage}`);
         if (isConfirmed){
-            console.log("submitting feedback:", formData);
+            console.log("Submitting feedback:", formData);
             setFormData({
                 name: '',
                 email: '',
                 feedback: ''
             });
-            alert("thank you for your valuable feedback!");
+            alert("Thank you for your valuable feedback!");
         }
     };
   return (
